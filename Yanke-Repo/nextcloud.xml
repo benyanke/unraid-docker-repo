@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Container>
+   <Name>NextCloud</Name>
+   <Beta>False</Beta>
+   <Project>https://nextcloud.com/</Project>
+   <Changes>[center][img width='300px' src='https://misc.benyanke.com/files/img/logos/nextcloud.png'][/center]
+
+[center][font size=5]NextCloud Change Log[/font][/center]
+[font size=4][/font]</Changes>
+   <Category>Cloud: Productivity: Tools: MediaServer:Other Network:Web Status:Stable</Category>
+   <Overview>e</Overview>
+   <Support>tbd</Support>
+   <Description>Nextcloud is an open source, self-hosted file sync and communication app platform. Access and sync your files, contacts, calendars and communicate and collaborate across your devices. You decide what happens with your data, where it is and who can access it.</Description>
+   <Registry>https://registry.hub.docker.com/u/benyanke/nextcloud/</Registry>
+   <Repository>benyanke/nextcloud</Repository>
+   <BindTime>true</BindTime>
+   <Privileged>false</Privileged>
+   <Networking>
+      <Mode>bridge</Mode>
+      <Publish>
+         <Port>
+            <HostPort>8888</HostPort>
+            <ContainerPort>8888</ContainerPort>
+            <Protocol>tcp</Protocol>
+         </Port>
+      </Publish>
+   </Networking>
+   <Environment>
+      <Variable>
+         <Name>DB_TYPE</Name>
+         <Value>mysql</Value>
+      </Variable>
+      <Variable>
+         <Name>DB_NAME</Name>
+         <Value>nextcloud</Value>
+      </Variable>
+      <Variable>
+         <Name>DB_USER</Name>
+         <Value>root</Value>
+      </Variable>
+      <Variable>
+         <Name>DB_PASSWORD</Name>
+         <Value></Value>
+      </Variable>
+      <Variable>
+         <Name>DB_HOST</Name>
+         <Value></Value>
+      </Variable>
+   </Environment>
+   <Data>
+      <Volume>
+         <HostDir>/mnt/user/appdata/nextcloud/apps2<HostDir />
+         <ContainerDir>/apps2</ContainerDir>
+         <Mode />
+      </Volume>
+      <Volume>
+         <HostDir>/mnt/user/appdata/nextcloud/config<HostDir />
+         <ContainerDir>/config</ContainerDir>
+         <Mode />
+      </Volume>
+      <Volume>
+         <HostDir>/mnt/user/appdata/nextcloud/data<HostDir />
+         <ContainerDir>/data</ContainerDir>
+         <Mode />
+      </Volume>
+   </Data>
+   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+   <Banner>https://switnet.net/wp-content/uploads/2017/01/nextcloud-logo-background.png</Banner>
+   <Icon>https://misc.benyanke.com/files/img/logos/nextcloud.png</Icon>
+</Container>
