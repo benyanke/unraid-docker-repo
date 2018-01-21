@@ -49,17 +49,17 @@
    </Environment>
    <Data>
       <Volume>
-         <HostDir>/mnt/user/appdata/nextcloud/apps2<HostDir />
+         <HostDir>/mnt/user/appdata/nextcloud/apps2</HostDir>
          <ContainerDir>/apps2</ContainerDir>
          <Mode />
       </Volume>
       <Volume>
-         <HostDir>/mnt/user/appdata/nextcloud/config<HostDir />
+         <HostDir>/mnt/user/appdata/nextcloud/config</HostDir>
          <ContainerDir>/config</ContainerDir>
          <Mode />
       </Volume>
       <Volume>
-         <HostDir>/mnt/user/appdata/nextcloud/data<HostDir />
+         <HostDir>/mnt/user/appdata/nextcloud/data</HostDir>
          <ContainerDir>/data</ContainerDir>
          <Mode />
       </Volume>
